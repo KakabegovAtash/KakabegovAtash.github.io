@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Atash Kakabegov's personal portfolio website with project details, support options, and interactive elements."
+    data-i18n="meta-description">
+  <meta name="author" content="Какабегов Аташ">
+  <title data-i18n="page-title">Atash Kakabegov | KyungHee University</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+
+<body>
+
+  <!-- Language Selector Floating -->
+  <div class="lang-selector" id="lang-selector">
+    <button class="lang-selector-btn" id="lang-btn" aria-label="Select language">
+      <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span class="lang-code-label">EN</span>
+    </button>
+    <div class="lang-dropdown" id="lang-dropdown">
+      <button class="lang-dropdown-item active" data-lang="en">
+        <span class="lang-flag">🇬🇧</span> English
+      </button>
+      <button class="lang-dropdown-item" data-lang="ru">
+        <span class="lang-flag">🇷🇺</span> Русский
+      </button>
+      <button class="lang-dropdown-item" data-lang="ko">
+        <span class="lang-flag">🇰🇷</span> 한국어
+      </button>
+    </div>
+  </div>
+
+  <!-- Theme Toggle Floating -->
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path
+        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+      </path>
+    </svg>
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+    </svg>
+  </button>
+
+  <!-- FULL-WIDTH HEADER BLOCK -->
+  <header class="full-width-header">
+    <div class="header-content-inner">
+
+      <!-- Profile Block Details -->
+      <div class="profile-block">
+        <div class="profile-main-row">
+
+          <!-- Left: Avatar -->
+          <div class="avatar-wrapper">
+            <img src="images/avatar.jpg" alt="Какабегов Аташ" class="profile-avatar-img">
+          </div>
+
+          <!-- Right: Details -->
+          <div class="profile-details">
+            <div class="profile-header-meta">
+              <div class="name-title-group">
+                <h1 class="profile-name" data-i18n="profile-name">Atash Kakabegov</h1>
+                <div class="profile-university-group">
+                  <img src="images/khu_logo.svg" alt="KyungHee University" class="university-logo">
+                  <p class="profile-title" data-i18n="profile-title">KyungHee University, Software Convergence, Data
+                    Science</p>
+                </div>
+                <div class="profile-location">
+                  <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span data-i18n="profile-location">Suwon/Anseong, South Korea</span>
+                </div>
+              </div>
+
+              <!-- Social Icons -->
+              <div class="social-links-row">
+                <!-- Telegram -->
+                <a href="https://t.me/killernyak" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+                  aria-label="Telegram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z" />
+                  </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/KakabegovAtash" target="_blank" rel="noopener noreferrer"
+                  class="social-icon-btn" aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/killernyakk/" target="_blank" rel="noopener noreferrer"
+                  class="social-icon-btn" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01" />
+                  </svg>
+                </a>
+                <!-- Website -->
+                <a href="https://KakabegovAtash.github.io/" target="_blank" rel="noopener noreferrer"
+                  class="social-icon-btn" aria-label="Website">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bio Text -->
+            <p class="profile-bio-text" data-i18n="profile-bio">
+              Aspiring Data Scientist. Passionate about machine learning, neuroscience, and understanding how data and
+              thinking work.
+            </p>
+
+            <!-- Tags -->
+            <div class="profile-tags-row">
+              <span class="profile-tag" data-i18n="tag-ds">Data Science</span>
+              <span class="profile-tag" data-i18n="tag-ai">Artificial Intelligence</span>
+              <span class="profile-tag" data-i18n="tag-py">Python</span>
+              <span class="profile-tag" data-i18n="tag-cog">Cognitive Science</span>
+              <span class="profile-tag" data-i18n="tag-ml">Machine Learning</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab Switcher Navigation -->
+      <nav class="tabs-navigation">
+        <button class="tab-btn active" data-tab="about-me" data-i18n="tab-about-me">About Me</button>
+        <button class="tab-btn" data-tab="news" data-i18n="tab-news">News</button>
+        <button class="tab-btn" data-tab="wishlist" data-i18n="tab-wishlist">Support</button>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- CENTERED MAIN CONTENT CONTAINER -->
+  <div class="portfolio-container">
+
+    <!-- SIDE NAVIGATION WIDGET (LEFT SIDEBAR) -->
+    <aside class="side-nav-widget" id="side-nav-widget">
+      <div class="side-nav-header">
+        <svg class="side-nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        <span data-i18n="side-nav-title">Categories</span>
+      </div>
+      <nav class="side-nav-list" id="side-nav-list">
+        <!-- Dynamic links populated by JS -->
+      </nav>
+    </aside>
+
+    <div class="tab-panels-wrapper">
+
+      <!-- TAB 1: ABOUT ME -->
+      <section class="tab-panel active" id="about-me">
+        <div class="tab-inner-content">
+
+          <!-- Section 1: About text -->
+          <div class="about-section" id="sec-about">
+            <h2 class="section-title" data-i18n="title-about">About Me</h2>
+            <div class="about-paragraphs">
+              <p data-i18n="about-p1">
+                Originally from Turkmenistan 🇹🇲. A GKS scholar studying Software Convergence (Data Science track) at
+                Kyung Hee University in South Korea. Focused on data analysis, algorithm development, and software
+                systems design.
+              </p>
+              <p data-i18n="about-p2">
+                Experienced in Python and C++. Familiar with GitHub and the Telegram Bot API. Knowledgeable about Linux
+                distributions and packages, with hands-on experience renting and configuring personal VPS servers.
+                Familiar with Google Antigravity.
+              </p>
+              <p data-i18n="about-p3">
+                Programming experience is mostly personal hobby projects and academic coursework. Successfully built
+                mini-projects for personal use: a Telegram bot for monitoring and notifying about Google Tasks; setup
+                and configuration of a personal VPN via 3x-ui panel using Xray VLESS + REALITY protocols.
+              </p>
+              <p data-i18n="about-p4">
+                Actively developing skills in Software Engineering and Data Science. Believer in the rigorous scientific
+                method, structured thinking, and continuous intellectual growth. If you are reading this, know that I
+                can still be tempted to work at Google.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2: Technical Skills -->
+          <div class="about-section" id="sec-skills">
+            <h2 class="section-title" data-i18n="title-skills">Technical Skills</h2>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-card-header">
+                  <span class="skill-icon">💻</span>
+                  <h3 class="skill-name" data-i18n="skill-cat-languages">Languages</h3>
+                </div>
+                <p class="skill-desc" data-i18n="skill-desc-languages">Python (Core, Scripting), C++ (Base)</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-card-header">
+                  <span class="skill-icon">🐧</span>
+                  <h3 class="skill-name" data-i18n="skill-cat-linux">Linux & Systems</h3>
+                </div>
+                <p class="skill-desc" data-i18n="skill-desc-linux">Arch Linux, Wayland / Hyprland environment, Shell Scripting (CLI/Bash)</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-card-header">
+                  <span class="skill-icon">☁️</span>
+                  <h3 class="skill-name" data-i18n="skill-cat-cloud">Cloud & Infrastructure</h3>
+                </div>
+                <p class="skill-desc" data-i18n="skill-desc-cloud">Google Cloud Platform (GCP), Oracle Cloud Infrastructure (OCI)</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-card-header">
+                  <span class="skill-icon">🤖</span>
+                  <h3 class="skill-name" data-i18n="skill-cat-ai">AI & Tools</h3>
+                </div>
+                <p class="skill-desc" data-i18n="skill-desc-ai">Gemini API Integration, AI-Assisted Development Tools</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 3: Education -->
+          <div class="about-section" id="sec-education">
+            <h2 class="section-title" data-i18n="title-education">Education</h2>
+            <div class="education-timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                  <span class="timeline-year" data-i18n="edu-year">2028 (Expected)</span>
+                  <h3 class="timeline-title" data-i18n="edu-school">KHU (Kyung Hee University)</h3>
+                  <p class="timeline-subtitle" data-i18n="edu-degree">Bachelor of Science in Software Convergence,
+                    Specialization in Data Science (BS)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Projects -->
+          <div class="about-section" id="sec-projects">
+            <h2 class="section-title" data-i18n="title-projects">Projects</h2>
+            <div class="projects-grid">
+              <a href="https://github.com/KakabegovAtash/Hackathon_Habsida_Demo" target="_blank" rel="noopener noreferrer"
+                class="project-card-item">
+                <div class="project-card-header">
+                  <span class="project-icon">🏆</span>
+                  <h3 class="project-name" data-i18n="project-hackathon-title">Hackathon MVP Demo</h3>
+                </div>
+                <p class="project-desc" data-i18n="project-hackathon-desc">Project author. Award-winning hackathon prototype built at Habsida Hackathon in Incheon (1st Place).</p>
+                <div class="project-tags">
+                  <span class="p-tag">HACKATHON</span>
+                  <span class="p-tag">WINNER</span>
+                  <span class="p-tag">MVP</span>
+                  <span class="p-tag">DEMO</span>
+                </div>
+              </a>
+              <a href="https://github.com/KakabegovAtash/TgBot_GoogleTasks" target="_blank" rel="noopener noreferrer"
+                class="project-card-item">
+                <div class="project-card-header">
+                  <span class="project-icon">🤖</span>
+                  <h3 class="project-name" data-i18n="project-tasks-title">Telegram Bot for GoogleTasks</h3>
+                </div>
+                <p class="project-desc" data-i18n="project-tasks-desc">Project author. A tool for automation and two-way
+                  synchronization of personal tasks between Telegram and Google Tasks.</p>
+                <div class="project-tags">
+                  <span class="p-tag">BOT</span>
+                  <span class="p-tag">INTEGRATION</span>
+                  <span class="p-tag">AUTOMATION</span>
+                </div>
+              </a>
+              <a href="https://github.com/KakabegovAtash/Tkinter_Zmeika" target="_blank" rel="noopener noreferrer"
+                class="project-card-item">
+                <div class="project-card-header">
+                  <span class="project-icon">🐍</span>
+                  <h3 class="project-name" data-i18n="project-snake-title">Tkinter Snake Game</h3>
+                </div>
+                <p class="project-desc" data-i18n="project-snake-desc">Project author. A desktop snake game
+                  implementation in Python with a Tkinter-based graphical user interface.</p>
+                <div class="project-tags">
+                  <span class="p-tag">PYTHON</span>
+                  <span class="p-tag">GUI</span>
+                  <span class="p-tag">TKINTER</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Section 4: Hobbies -->
+          <div class="about-section" id="sec-hobbies">
+            <h2 class="section-title" data-i18n="title-hobbies">Hobbies & Interests</h2>
+            <div class="hobbies-list">
+              <div class="hobby-item">
+                <span class="hobby-emoji">💻</span>
+                <div class="hobby-content">
+                  <h4 class="hobby-name" data-i18n="hobby-ai-title">Coding & AI Experiments</h4>
+                  <p class="hobby-desc" data-i18n="hobby-ai-desc">Writing code in Python and C++ and exploring the
+                    capabilities of new language models.</p>
+                </div>
+              </div>
+              <div class="hobby-item">
+                <span class="hobby-emoji">🧠</span>
+                <div class="hobby-content">
+                  <h4 class="hobby-name" data-i18n="hobby-neuro-title">Neuroscience & Evolution of Consciousness</h4>
+                  <p class="hobby-desc" data-i18n="hobby-neuro-desc">Studying cognitive science, brain structure, and
+                    evolutionary mechanisms of thought, connecting them with philosophy and analytics.</p>
+                </div>
+              </div>
+              <div class="hobby-item">
+                <span class="hobby-emoji">💻</span>
+                <div class="hobby-content">
+                  <h4 class="hobby-name" data-i18n="hobby-linux-title">Customization & Linux Systems</h4>
+                  <p class="hobby-desc" data-i18n="hobby-linux-desc">Configuring and optimizing my work environment on
+                    Arch Linux (Hyprland), enjoying fine-tuning systems for personal workflows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 2: NEWS -->
+      <section class="tab-panel" id="news">
+        <div class="tab-inner-content">
+
+          <div class="about-section" id="sec-news">
+            <h2 class="section-title" data-i18n="title-news">News</h2>
+            <div class="news-timeline">
+
+              <div class="news-item">
+                <div class="news-dot"></div>
+                <div class="news-content">
+                  <span class="news-date" data-i18n="news-1-date">July 2026</span>
+                  <h3 class="news-header" data-i18n="news-1-title">1st Place. First Hackathon</h3>
+                  <p class="news-body" data-i18n="news-1-text" data-i18n-html="true">
+                    Incheon Hackathon by Habsida Online Programming School, with a prize pool of <strong>1,000,000
+                      KRW</strong>. Placed 1st with a 10-point lead over all other teams. Great experience. It was
+                    awesome to spend time and compete with other teams.
+                  </p>
+                  <div class="news-media">
+                    <img src="images/Hackathon_winner.jpg" alt="First Place Hackathon Winner" class="news-img">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 3: WISHLIST (SUPPORT) -->
+      <section class="tab-panel" id="wishlist">
+        <div class="tab-inner-content">
+
+          <!-- Payment details card -->
+          <div class="about-section payment-card" id="sec-payment">
+            <h2 class="section-title" data-i18n="title-payment">Details for Support</h2>
+            <p class="payment-intro" data-i18n="payment-intro">If you would like to support my projects or just send a
+              pleasant bonus, feel free to use the details below:</p>
+            <div class="payment-methods">
+              <div class="payment-method-item">
+                <div class="method-info">
+                  <span class="method-emoji">💳</span>
+                  <span class="method-name" data-i18n="payment-method">Bank Card (Hana Bank)</span>
+                </div>
+                <div class="copy-field">
+                  <span class="copy-value">534 910691 97907</span>
+                  <button class="btn-copy" data-copy="53491069197907" data-i18n="btn-copy">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section wishlist-card-collapsible collapsed" id="sec-wishlist">
+            <h2 class="section-title wishlist-toggle-header">
+              <span data-i18n="title-wishlist">Wishlist</span>
+              <span class="wishlist-toggle-icon">▼</span>
+            </h2>
+            <div class="wishlist-vertical-list">
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-cooper-name">The New Mini Cooper</span>
+                  <p class="wish-item-desc" data-i18n="wish-cooper-desc">An elegant British hatchback with legendary
+                    go-kart handling.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image.png" alt="The New Mini Cooper" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-ps5-name">Playstation 5 Pro</span>
+                  <p class="wish-item-desc" data-i18n="wish-ps5-desc">A powerful console for gaming in 4K resolution
+                    with enhanced ray tracing.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-1.png" alt="Playstation 5 Pro" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-steam-name">Steam Machine 1TB</span>
+                  <p class="wish-item-desc" data-i18n="wish-steam-desc">A portable PC from Valve for accessing your
+                    Steam library anywhere.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-2.png" alt="Steam Machine 1TB" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-switch-name">Nintendo Switch 2</span>
+                  <p class="wish-item-desc" data-i18n="wish-switch-desc">Next generation of the hybrid console for
+                    iconic Nintendo games.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-3.png" alt="Nintendo Switch 2" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-sony-name">Sony Alpha 6600 with Sony FE 24mm f/1.4 GM
+                    lens</span>
+                  <p class="wish-item-desc" data-i18n="wish-sony-desc">A mirrorless camera with a top-tier fast lens for
+                    creative projects.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-4.png" alt="Sony Alpha 6600" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-guitar-name">Bass Guitar & Bass Amplifier</span>
+                  <p class="wish-item-desc" data-i18n="wish-guitar-desc">A set for diving into the world of low
+                    frequencies and rhythm.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-5.png" alt="Bass guitar" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-laptop-name">Framework Laptop 13 Pro</span>
+                  <p class="wish-item-desc" data-i18n="wish-laptop-desc">A modular laptop with easily replaceable
+                    components and high repairability.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-6.png" alt="Framework Laptop 13 Pro" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-chair-name">Herman Miller Aeron Chair</span>
+                  <p class="wish-item-desc" data-i18n="wish-chair-desc">An ergonomic chair for perfect posture during
+                    work.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-7.png" alt="Seat Herman Miller" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-telecaster-name">Fender Telecaster</span>
+                  <p class="wish-item-desc" data-i18n="wish-telecaster-desc">A legendary electric guitar with a unique
+                    clean sound.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-8.png" alt="Fender Telecaster" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-amp-name">Positive Grid Spark</span>
+                  <p class="wish-item-desc" data-i18n="wish-amp-desc">A smart guitar amplifier with millions of presets
+                    and AI support.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-9.png" alt="Positive Grid Spark" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-factorio-name">Factorio</span>
+                  <p class="wish-item-desc" data-i18n="wish-factorio-desc">A factory automation simulator where "the
+                    factory must grow".</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/image-10.png" alt="Factorio" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wish-row-item">
+                <div class="wish-item-left">
+                  <span class="wish-item-name" data-i18n="wish-keyboard-name">Creamy Good Keyboard</span>
+                  <p class="wish-item-desc" data-i18n="wish-keyboard-desc">A mechanical keyboard with quiet, smooth key
+                    travel for typing pleasure.</p>
+                </div>
+                <div class="wish-item-right">
+                  <div class="wish-item-photo-wrapper">
+                    <img src="images/keyboard.jpg" alt="Creamy Good Keyboard" class="wish-item-photo">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/script.js?v=2"></script>
+</body>
+
+</html>
