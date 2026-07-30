@@ -245,7 +245,7 @@ def main():
             scripts.forEach(oldScript => {{
               const newScript = document.createElement('script');
               Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-              newScript.textContent = oldScript.textContent;
+              newScript.textContent = "(function() {{\\n" + oldScript.textContent + "\\n}})();";
               document.body.appendChild(newScript);
             }});
           }} catch (err) {{
